@@ -1,5 +1,9 @@
 #include<stdio.h>
-/*Affiche le texte Programming is like building a multilingual puzzle*/
+/** 
+*main - point d'entrée
+*puts - Affiche le texte entre guillemets
+*Return - 0 succes du programme
+*/
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
