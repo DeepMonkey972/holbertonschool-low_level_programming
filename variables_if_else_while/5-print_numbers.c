@@ -10,8 +10,9 @@ int nombre;
 nombre = 0;
 while (nombre <= 9)
 {
-printf("%d\n", nombre);
+printf("%d", nombre);
 nombre++;
 }
+printf("\n");
 return (0);
 }
