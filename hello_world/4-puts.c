@@ -2,7 +2,7 @@
 /** 
 *main - point d'entrée
 *puts - Affiche le texte entre guillemets
-*Return - 0 succes du programme
+*Return: Always 0 (Success)
 */
 int main(void)
 {
