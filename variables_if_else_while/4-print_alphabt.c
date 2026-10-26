@@ -9,16 +9,15 @@ int main(void)
 char lettres = 'a';
 while (lettres <= 'z')
 {
-if (lettres == 'e')
+if (lettres != 'e' && lettres != 'q')
 {
-;
-}
-if (lettres == 'q')
-{
-;
-}
 putchar (lettres);
 lettres++;
+}
+if (lettres == 'e' || lettres == 'q')
+{
+lettres++;
+}
 }
 putchar ('\n');
 return (0);
