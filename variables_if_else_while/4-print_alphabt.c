@@ -9,8 +9,6 @@ int main(void)
 char lettres = 'a';
 while (lettres <= 'z')
 {
-putchar (lettres);
-lettres++;
 if (lettres == 'e')
 {
 ;
@@ -19,6 +17,8 @@ if (lettres == 'q')
 {
 ;
 }
+putchar (lettres);
+lettres++;
 }
 putchar ('\n');
 return (0);
