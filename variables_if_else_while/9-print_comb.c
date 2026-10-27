@@ -11,8 +11,11 @@ nombre = 48;
 while (nombre <= 57)
 {
 putchar (nombre);
+if (nombre != 57)
+{
 putchar (',');
 putchar (' ');
+}
 nombre++;
 }
 putchar ('\n');
