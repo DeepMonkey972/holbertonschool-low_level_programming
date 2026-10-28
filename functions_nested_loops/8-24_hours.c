@@ -5,11 +5,6 @@
  *
  * Return: void
  */
-int main(void)
-{
-	jack_bauer();
-	return (0);
-}
 void jack_bauer(void)
 {
 	int h = 0;
@@ -27,5 +22,5 @@ void jack_bauer(void)
 			_putchar('\n');
 		}
 	}
-	return;
+	return (0);
 }
