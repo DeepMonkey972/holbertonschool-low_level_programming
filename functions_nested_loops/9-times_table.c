@@ -33,11 +33,11 @@ for (i = 0; i <= 9; i++)
 	else
 	{
 		if (j == 9)
-	{
+		{
 			_putchar(k / 10 + '0');
 			_putchar(k % 10 + '0');
 			break;
-	}
+		}
 		_putchar(k / 10 + '0');
 		_putchar(k % 10 + '0');
 		_putchar(',');
