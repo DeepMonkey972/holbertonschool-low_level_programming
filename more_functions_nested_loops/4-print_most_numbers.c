@@ -6,7 +6,7 @@
  */
 void print_most_numbers(void)
 {
-	int compteur = 0;
+	int compteur;
 
 	for (compteur = 0; compteur <= 9; compteur++)
 	{
