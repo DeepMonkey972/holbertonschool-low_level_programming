@@ -27,7 +27,7 @@ int main(void)
 			printf(" Buzz");
 			if (compteur == 100)
 			{
-				printf(" \n");
+				printf("\n");
 			}
 		}
 		else if (compteur % 3 == 0)
