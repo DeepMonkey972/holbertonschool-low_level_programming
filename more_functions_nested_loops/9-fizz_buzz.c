@@ -14,7 +14,11 @@ int main(void)
 
 	for (compteur = 1; compteur <= 100; compteur++)
 	{
-		if (compteur % 5 == 0 && compteur % 3 == 0)
+		if (compteur == 1)
+		{
+			printf("%d", compteur);
+		}
+		else if (compteur % 5 == 0 && compteur % 3 == 0)
 		{
 			printf(" FizzBuzz");
 		}
@@ -32,7 +36,7 @@ int main(void)
 		}
 		else
 		{
-			printf("%d ", compteur);
+			printf(" %d", compteur);
 		}
 	}
 	return (0);
