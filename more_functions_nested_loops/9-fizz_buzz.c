@@ -12,7 +12,7 @@ int main(void)
 {
 	int compteur;
 
-	for (compteur = 0; compteur <= 100; compteur++)
+	for (compteur = 1; compteur <= 100; compteur++)
 	{
 		if (compteur % 5 == 0 && compteur % 3 == 0)
 		{
