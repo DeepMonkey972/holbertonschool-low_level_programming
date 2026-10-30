@@ -1,10 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_diagonal - draws a diagonal line on the terminal
- * @n: number of times the character \ should be printed
+ * main - prints the numbers from 0 to 100, followed by a new line
+ * but for multiples of three print Fizz instead of the number
+ * and for the multiples of five print Buzz.
+ * For numbers which are multiples of both three and five print FizzBuzz.
  *
- * Return: void
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -28,7 +30,7 @@ int main(void)
 		{
 			printf("\n");
 		}
-		else 
+		else
 		{
 			printf("%d ", compteur);
 		}
