@@ -16,15 +16,15 @@ int main(void)
 	{
 		if (compteur % 5 == 0 && compteur % 3 == 0)
 		{
-			printf("FizzBuzz ");
+			printf(" FizzBuzz");
 		}
 		else if (compteur % 5 == 0)
 		{
-			printf("Buzz ");
+			printf(" Buzz");
 		}
 		else if (compteur % 3 == 0)
 		{
-			printf("Fizz ");
+			printf(" Fizz");
 		}
 		else if (compteur == 100)
 		{
