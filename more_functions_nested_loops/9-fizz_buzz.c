@@ -25,14 +25,14 @@ int main(void)
 		else if (compteur % 5 == 0)
 		{
 			printf(" Buzz");
+			if (compteur == 100)
+			{
+				printf(" \n");
+			}
 		}
 		else if (compteur % 3 == 0)
 		{
 			printf(" Fizz");
-		}
-		else if (compteur == 100)
-		{
-			printf("\n");
 		}
 		else
 		{
