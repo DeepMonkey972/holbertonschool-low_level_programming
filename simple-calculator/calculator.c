@@ -11,5 +11,9 @@ int main(void)
 		printf("A bientôt !!\n");
 		return (0);
 	}
+	else if (choix > 4)
+	{
+		printf("Invalid choice\n");
+	}
 	return (0);
 }
