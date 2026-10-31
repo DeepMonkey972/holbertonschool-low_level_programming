@@ -24,5 +24,36 @@ int main(void)
 		scanf("%f", &nombre2);
 		printf("Le résultat est : %.2f\n", nombre1 + nombre2);
 	}
+	else if (choix == 2)
+	{
+		printf("Entrez le premier nombre de votre calcul :\n");
+		scanf("%f", &nombre1);
+		printf("Entrez le deuxième nombre de votre calcul :\n");
+		scanf("%f", &nombre2);
+		printf("Le résultat est : %.2f\n", nombre1 - nombre2);
+	}
+	else if (choix == 3)
+	{
+		printf("Entrez le premier nombre de votre calcul :\n");
+		scanf("%f", &nombre1);
+		printf("Entrez le deuxième nombre de votre calcul :\n");
+		scanf("%f", &nombre2);
+		printf("Le résultat est : %.2f\n", nombre1 * nombre2);
+	}
+	else if (choix == 4)
+	{
+		
+		printf("Entrez le premier nombre de votre calcul :\n");
+		scanf("%f", &nombre1);
+		printf("Entrez le deuxième nombre de votre calcul :\n");
+		
+		scanf("%f", &nombre2);
+		if (nombre1 == 0 || nombre2 == 0)
+		{
+			printf("Error : division by zero\n");
+		}
+		printf("Le résultat est : %.2f\n", nombre1 / nombre2);
+		
+	}
 	return (0);
 }
