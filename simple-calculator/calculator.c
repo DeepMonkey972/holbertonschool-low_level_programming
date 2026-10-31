@@ -51,6 +51,7 @@ int main(void)
 		if (nombre1 == 0 || nombre2 == 0)
 		{
 			printf("Error : division by zero\n");
+			return (0);
 		}
 		printf("Le résultat est : %.2f\n", nombre1 / nombre2);
 		
