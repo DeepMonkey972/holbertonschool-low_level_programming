@@ -6,6 +6,24 @@ J'utilise printf avec le format %.6f pour plus de precisions ainsi que "end" et 
 
 ## Observed Performance Differences
 
+Voici les résultats observés lors de l'execution du programme baseline_loop.c ainsi qu'une petite description de chaque étape :
+
+Iterations: 100 000 000
+Execution time: 0.117275 seconds
+
+Si on compare le temps d'execution au nombre d'iterations (0,117 275 / 100 000 000 = 0,00000000117275), chaque iterations se fait donc en 0,00000000117275 secondes.
+
+
+Voici les résultats observés lors de l'execution du programme comparaison_algorithms.c ainsi qu'une petite description de chaque étape :
+
+Naive algorithm result: 625025000
+Naive algorithm time: 2.181339 seconds
+Single-pass algorithm result: 25000
+Single-pass algorithm time: 0.000085 seconds
+
+Si on compare les résultats de "Naive algorithm result" (625 025 000) et le "Single-pass algorithm result" (25 000), on se rend compte que le résultat de l'algorithme single-pass est a peu près 25 000 fois plus rapide (625 025 000 / 25 000 = 25 001).
+
+
 Voici les résultats observés lors de l'execution du programme instrumentation_lab.c ainsi qu'une petite description de chaque étape :
 
 TOTAL seconds : 0.000469
@@ -39,6 +57,7 @@ Les limites de cette experiences sont :
 
 ## Practical Engineering Takeaway
 
+
 Pour résumé, il faut se concentrer sur l'optimisation du programme pour en réduire sa consommation d'énergie (Energie = puissance x temps).
-Un algorithme linéaire est selon moi le plus adapté car pour des volumes de données plus importantes, le temps restera proportionnnel à la quantité de ces données. 
+Un algorithme linéaire O(n)est selon moi le plus adapté car pour des volumes de données plus importantes, le temps restera proportionnnel à la quantité de ces données, tandis que O(n^2) augmenterait le temps d'execution de manière significative sur un grand volume de données donc il serait forcément plus énergivore si on se fie à la formule de calcul de l'énergie précédemment cité.
 
