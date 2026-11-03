@@ -1,22 +1,14 @@
 #include "main.h"
-
 /**
- * main - check the code
+ * puts2 - prints every other character of a string
+ * @str: string to be printed
  *
- * Return: Always 0.
+ * Return: void
  */
-int main(void)
-{
-    char *str;
-
-    str = "0123456789";
-    puts2(str);
-    return (0);
-}
 void puts2(char *str)
 {
 	int len;
-	
+
 	for (len = 0; str[len] != '\0'; len++)
 	{
 		if (len % 2 == 0)
