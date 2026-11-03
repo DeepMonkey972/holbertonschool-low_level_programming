@@ -9,6 +9,7 @@
 int _strlen(char *s)
 {
 	int compteur = 0;
+	
 
 	while (*s != '\0')
 	{
