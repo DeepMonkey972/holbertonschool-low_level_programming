@@ -1,34 +1,38 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * main - check the code
+ * _atoi - convert a string to an integer
+ * @s: string to be converted
  *
- * Return: Always 0.
+ * Return: the integer value of the string
  */
-int main(void)
-{
-    int nb;
-
-    nb = _atoi("98");
-    printf("%d\n", nb);
-    nb = _atoi("-402");
-    printf("%d\n", nb);
-    nb = _atoi("          ------++++++-----+++++--98");
-    printf("%d\n", nb);
-    nb = _atoi("214748364");
-    printf("%d\n", nb);
-    nb = _atoi("0");
-    printf("%d\n", nb);
-    nb = _atoi("Suite 402");
-    printf("%d\n", nb);
-    nb = _atoi("         +      +    -    -98 Battery Street; San Francisco, CA 94111 - USA             ");
-    printf("%d\n", nb);
-    nb = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
-    printf("%d\n", nb);
-    return (0);
-}
 int _atoi(char *s)
 {
+	int i = 0;
+	int chiffre = 0;
+	int moins = 0;
+	double nb = 0;
 
+	while (s[i] != '\0' && (s[i] < '0' || s[i] > '9'))
+	{
+		if (s[i] == '-')
+		moins++;
+		i++;
+		
+	}
+	while (s[i] >= '0' && s[i] <= '9')
+	{
+		chiffre = chiffre + 1;
+		nb = (s[i] - '0') + nb * 10;
+		i++;
+	}
+	if (chiffre == 0)
+	{
+		return (0);
+	}
+	if (moins % 2 != 0)
+	{
+		nb = -nb;
+	}
+	return (nb);
 }
