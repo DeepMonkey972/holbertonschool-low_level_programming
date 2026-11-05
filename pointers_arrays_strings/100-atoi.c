@@ -18,7 +18,6 @@ int _atoi(char *s)
 		if (s[i] == '-')
 		moins++;
 		i++;
-		
 	}
 	while (s[i] >= '0' && s[i] <= '9')
 	{
