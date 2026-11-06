@@ -13,7 +13,7 @@ void print_chessboard(char (*a)[8])
 
 	while (ligne < 8)
 	{
-		col = 0;
+		colonne = 0;
 		while (colonne < 8)
 		{
 			_putchar(a[ligne][colonne]);
