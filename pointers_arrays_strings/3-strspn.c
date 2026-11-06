@@ -1,23 +1,34 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * main - check the code
+ * _strspn - gets the length of a prefix substring
+ * @s: string to search
+ * @accept: string containing the characters to match
  *
- * Return: Always 0.
+ * Return: number of bytes in the initial segment of s
  */
-int main(void)
-{
-    char *s = "hello, world";
-    char *f = "oleh";
-    unsigned int n;
-
-    n = _strspn(s, f);
-    printf("%u\n", n);
-    return (0);
-}
 unsigned int _strspn(char *s, char *accept)
 {
+	unsigned int sum = 0;
+	char *reset = accept;
 
-
+	while (*s != '\0')
+	{
+		while (*accept != '\0')
+		{
+			if (*s == *accept)
+			{
+				sum++;
+				break;
+			}
+			accept++;
+		}
+		if (*accept == '\0')
+		{
+			return (sum);
+		}
+		s++;
+		accept = reset;
+	}
+	return (sum);
 }
