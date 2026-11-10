@@ -8,15 +8,15 @@
  *
  * Return: pointer to the new dog (Success), NULL (Error)
  */
-dog_t new_dog(char name, float age, charowner)
+dog_t new_dog(char *name, float age, char *owner)
 {
-	dog_t newdog;
+	dog_t *newdog;
 	int i = 0, j = 0, len1 = 0, len2 = 0;
-	char s1, s2;
+	char *s1, *s2;
 
 	while (name[len1] != '\0')
 		len1++;
-	s1 = malloc(sizeof(name) * (len1 + 1));
+	s1 = malloc(sizeof(*name) * (len1 + 1));
 	if (s1 == NULL)
 		return (NULL);
 	while (name[i] != '\0')
@@ -27,7 +27,7 @@ dog_t new_dog(char name, float age, charowner)
 	s1[i] = name[i];
 	while (owner[len2] != '\0')
 		len2++;
-	s2 = malloc(sizeof(owner) (len2 + 1));
+	s2 = malloc(sizeof(*owner) * (len2 + 1));
 	if (s2 == NULL)
 	{
 		free(s1);
