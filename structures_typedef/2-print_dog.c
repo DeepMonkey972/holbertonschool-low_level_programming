@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include "dog.h"
+/**
+ * print_dog - prints a struct dog
+ * @d: pointer to struct dog
+ *
+ * Description: This function prints the name, age, and owner of a dog
+ *              stored in a struct dog.
+ */
+void print_dog(struct dog *d)
+{
+	if (d == NULL)
+		return;
+	if (d->name == NULL)
+		printf("(nil)\n");
+	printf("Name: %s\n",  d->name);
+	printf("Age: %.6f\n", d->age);
+	if (d->owner == NULL)
+		printf("(nil\n)");
+	printf("Owner: %s\n", d->owner);
+}
