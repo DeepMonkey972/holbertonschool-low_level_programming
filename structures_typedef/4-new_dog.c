@@ -8,7 +8,7 @@
  *
  * Return: pointer to the new dog (Success), NULL (Error)
  */
-dog_t new_dog(char *name, float age, char *owner)
+dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newdog;
 	int i = 0, j = 0, len1 = 0, len2 = 0;
