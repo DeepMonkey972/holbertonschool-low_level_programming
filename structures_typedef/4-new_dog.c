@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "dog.h"
-/*
+/**
  * new_dog - creates a new dog
  * @name: name of the dog
  * @age: age of the dog
@@ -8,7 +8,7 @@
  *
  * Return: pointer to the new dog (Success), NULL (Error)
  */
-dog_tnew_dog(char name, float age, charowner)
+dog_t new_dog(char name, float age, charowner)
 {
 	dog_t newdog;
 	int i = 0, j = 0, len1 = 0, len2 = 0;
