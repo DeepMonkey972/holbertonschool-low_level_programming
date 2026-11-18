@@ -10,15 +10,18 @@
  */
 int main(int argc, char *argv[])
 {
-	int nb1 = atoi(argv[1]);
-	int nb2 = atoi(argv[2]);
-	int res = nb1 * nb2;
-	
+	int nb1;
+	int nb2;
+	int res;
+
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	nb1 = atoi(argv[1]);
+	nb2 = atoi(argv[2]);
+	res = nb1 * nb2;
 	printf("%d\n", res);
 	return (0);
 }
