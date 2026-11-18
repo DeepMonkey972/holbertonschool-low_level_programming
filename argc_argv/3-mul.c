@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	int nb1 = atoi(argv[1]);
 	int nb2 = atoi(argv[2]);
 	int res = nb1 * nb2;
-	printf("%d\n", res);
 
+	printf("%d\n", res);
 	return (0);
 }
