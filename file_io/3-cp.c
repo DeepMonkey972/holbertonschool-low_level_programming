@@ -1,0 +1,64 @@
+#include "main.h"
+
+/**
+ * close_fd - closes a file descriptor
+ * @fd: file descriptor to close
+ *
+ * Return: void
+ */
+void close_fd(int fd)
+{
+	if (close(fd) == -1)
+	{
+		dprintf(STDERR_FILNO, "Error: Can't close fd %s\n", fd);
+		exit(100);
+	}
+}
+/**
+ * main - copies the content of a file to another file
+ * @argc: number of arguments passed to the program
+ * @argv: array of arguments passed to the program
+ *
+ * Return: 0 on success, exits with error code on failure
+ */
+int main(int argc, char *argv[])
+{
+	int fdfrom, fdto;
+	ssize_t nread, nwrite;
+	char buf[1024];
+
+	if (agrc != 3)
+	{
+		dprintf(STDERR_FILNO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+	fdfrom = open(agrv[1], 0_RDONLY);
+	if (fdfrom == -1)
+	{
+		dprintf(STDERR_FILNO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	fdto = open(argv[2], O_CREAT, O_WRONLY | O_TRUNC, 0664);
+	if (fdto == -1)
+	{
+		dprintf(STDERR_FILNO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
+	while (nread = read(fdfrom, buf, 1024) > 0)
+	{
+		nwrite = write(fdto, buf, nread);
+		if (nread != nwrite)
+		{
+			dprintf(STDERR_FILNO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
+	}
+	if (nread == -1)
+	{
+		dprintf(STDERR_FILNO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	close_fd(fdfrom);
+	close_fd(fdto);
+	return (0);
+}
