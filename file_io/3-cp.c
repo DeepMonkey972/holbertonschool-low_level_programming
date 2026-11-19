@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while (nread = read(fdfrom, buf, 1024) > 0)
+	while ((nread = read(fdfrom, buf, 1024)) > 0)
 	{
 		nwrite = write(fdto, buf, nread);
 		if (nread != nwrite)
