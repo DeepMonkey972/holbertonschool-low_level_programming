@@ -11,7 +11,6 @@
 int _strlen(const char *s)
 {
 	int compteur = 0;
-	
 
 	while (*s != '\0')
 	{
