@@ -3,6 +3,25 @@
 #include <stdio.h>
 #include "lists.h"
 /**
+ * _strlen - returns the length of a string
+ * @s: pointer to a string
+ *
+ * Return: length of the string
+ */
+int _strlen(const char *s)
+{
+	int compteur = 0;
+	
+
+	while (*s != '\0')
+	{
+		s++;
+		compteur++;
+	}
+	return (compteur);
+}
+
+/**
  * add_node - adds a new node at the beginning of a list_t list
  * @head: pointer to the head of the list
  * @str: string to be added to the new node
